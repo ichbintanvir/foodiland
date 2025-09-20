@@ -38,7 +38,7 @@ const RecommendRecipes = ({
           className={`${styles}`}
         />
       )}
-      <div className={`grid grid-cols-1 sm:grid-cols-2 ${columnClass} gap-10 py-10`}>
+      <div className={`grid grid-cols-1 sm:grid-cols-2 ${columnClass} gap-10`}>
         {recommandRecipe?.map((recipe) => (
           <Link to={`/recipe-details/${recipe?.title}`}>
             <RecipeCard

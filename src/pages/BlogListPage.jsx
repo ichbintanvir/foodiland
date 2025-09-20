@@ -17,8 +17,8 @@ const BlogListPage = () => {
         <BlogHeading />
         <Input />
         {/* <User2 userImg={`/chef.svg`} name='Wade Warren' data='12 November 2021'/> */}
-        <div className="grid grid-cols-4 gap-[40px] py-10">
-          <div className="col-span-3 flex flex-col gap-[32px]">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-[40px] p-10">
+          <div className="md:col-span-3 flex flex-col gap-[32px]">
             {blogs?.map((blog) => (
               <Link to={`/blog/${blog?.blog_title}`}>
                 <BlogCard
@@ -33,7 +33,7 @@ const BlogListPage = () => {
               </Link>
             ))}
           </div>
-          <div>
+          <div className="">
             <H4>Tasty Recipes</H4>
             <div className="flex flex-col gap-2">
               {otherRecipe?.map((recipe) => (

@@ -8,7 +8,8 @@ const H2 = ({ children, className }) => {
          text-[24px]        // Mobile default
          sm:text-[32px]     // Small tablets
          md:text-[40px]     // Medium tablets
-         lg:text-[48px]     // Large screens`,
+         lg:text-[48px]     // Large screens
+         leading-5 `,
         className
       )}
     >

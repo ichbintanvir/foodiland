@@ -5,7 +5,7 @@ import User2 from '../User2'
 
 const BlogCard = ({blog_img,blog_title,author_name,author_img,blog_description,published_date}) => {
   return (
-    <div className='flex items-center gap-[40px]'>
+    <div className='flex flex-col lg:flex-row items-center gap-[40px]'>
         <div className='w-[290px] h-[200px] rounded-xl overflow-hidden'>
             <img src={blog_img} alt={blog_title} className='w-full h-full object-fill'/>
         </div>

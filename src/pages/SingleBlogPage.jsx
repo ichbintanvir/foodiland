@@ -16,7 +16,7 @@ const SingleBlogPage = () => {
   const { title } = useParams();
   const data = SingleBlog(title);
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-10">
       <div className="flex flex-col justify-center items-center space-y-8">
         <H1 className={`text-center`}>{data?.blog_title}</H1>
         <User2
@@ -26,15 +26,15 @@ const SingleBlogPage = () => {
         />
         <P1>{data?.post_sort_description}</P1>
       </div>
-      <div className="w-full h-[600px] overflow-hidden rounded-2xl my-16">
+      <div className="w-full md:h-[600px] overflow-hidden rounded-2xl my-16">
         <img
           src={data?.post_img}
           alt={data?.id}
           className="w-full h-full object-fill"
         />
       </div>
-      <div className="mx-[75px] grid grid-cols-7 gap-[49px]">
-        <div className="col-span-6">
+      <div className="md:mx-[75px] grid md:grid-cols-7 gap-[49px]">
+        <div className="md:col-span-6">
           {data?.post_details.map((eachDetail) => (
             <div key={eachDetail?.id} className="py-10 space-y-3">
               <H5>{eachDetail?.title}</H5>
@@ -48,7 +48,7 @@ const SingleBlogPage = () => {
               (<video
                 src={eachDetail?.video_link}
                 controls
-                className="w-full h-[600px] rounded-2xl"
+                className="w-full md:h-[600px] rounded-2xl"
               >
                 Your browser does not support the video tag.
               </video>)
@@ -57,9 +57,9 @@ const SingleBlogPage = () => {
             </div>
           ))}
         </div>
-        <div className="w-[131px] py-10">
+        <div className="md:w-[131px] py-10">
           <H7 className={`text-[14px]`}>SHARE THIS ON:</H7>
-          <div className="flex flex-col items-center gap-5 py-5">
+          <div className="flex flex-row md:flex-col justify-center md:justify-start items-center gap-5 py-5">
             <BlackFB/>
             <BlackTwitter/>
             <BlackInstagram/>

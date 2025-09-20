@@ -5,9 +5,9 @@ import { cn } from "../../lib/cn";
 
 const SectionHeading2 = ({ title, description,className }) => {
   return (
-    <div className={cn(`flex justify-between items-center`,className)}>
-      <H2 className={`max-w-[550px] leading-15`}>{title}</H2>
-      <P1 className={`max-w-[620px]`}>{description}</P1>
+    <div className={cn(`flex flex-col justify-between p-10`,className)}>
+      <H2 className={`leading-5 lg:leading-15`}>{title}</H2>
+      <P1 className={``}>{description}</P1>
     </div>
   );
 };

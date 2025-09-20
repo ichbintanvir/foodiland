@@ -10,10 +10,10 @@ const CheifCard = () => {
 
   return (
     <div className="container mx-auto py-[80px]">
-      <div className="grid grid-cols-2 justify-between items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center">
         <div className="flex flex-col space-y-5">
             <SectionHeading2 title={title} description={description} className={`flex-col justify-start items-start`}/>
-            <div>
+            <div className="px-10">
                 <Button className={`text-white bg-black`}>learn more</Button>
             </div>
         </div>

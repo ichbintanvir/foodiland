@@ -53,7 +53,7 @@ const ContactForm = () => {
     <div className="space-y-5">
       <H1>Contact Us</H1>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex gap-10">
+        <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex flex-col gap-3 w-full">
             <label htmlFor="name" className="uppercase text-black/60">Name</label>
             <input
@@ -82,7 +82,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="flex gap-10">
+        <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex flex-col gap-3 w-full">
             <label htmlFor="subject" className="uppercase text-black/60">Subject</label>
             <input

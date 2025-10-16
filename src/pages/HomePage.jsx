@@ -5,10 +5,15 @@ import CheifCard from "../components/Home/CheifCard";
 import Instagram from "../components/Home/Instagram";
 import TastyRecipies from "../components/Home/TastyRecipies";
 import DeliciousRecipies from "../components/Home/DeliciousRecipies";
+import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Home Page</title>
+        <meta name="description" content="Welcome to the homepage" />
+      </Helmet>
       <Hero />
       <TastyRecipies />
       <CheifCard />

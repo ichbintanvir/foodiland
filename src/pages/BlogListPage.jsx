@@ -8,11 +8,16 @@ import H4 from "../elements/Heading/H4";
 import { Link } from "react-router-dom";
 import MiniRecipeCard from "../components/Reuse/MiniRecipeCard";
 import { SliceRecipies } from "../../utils/recipiesdata";
+import { Helmet } from "react-helmet";
 
 const BlogListPage = () => {
   const otherRecipe = SliceRecipies(0, 3);
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <title>Blogs Page</title>
+        <meta name="description" content="Welcome to the blogspage" />
+      </Helmet>
       <div className="flex flex-col justify-center items-center">
         <BlogHeading />
         <Input />

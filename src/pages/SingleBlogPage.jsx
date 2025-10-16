@@ -11,12 +11,17 @@ import BlackTwitter from "../assets/svg/BlackTwitter";
 import BlackInstagram from "../assets/svg/BlackInstagram";
 import Subscriber from "../components/Reuse/Subscriber";
 import RecommendRecipes from "../components/Reuse/RecommendRecipes";
+import { Helmet } from "react-helmet";
 
 const SingleBlogPage = () => {
   const { title } = useParams();
   const data = SingleBlog(title);
   return (
     <div className="container mx-auto px-10">
+      <Helmet>
+        <title>Single Blog Page</title>
+        <meta name="description" content="Welcome to the singleblog page" />
+      </Helmet>
       <div className="flex flex-col justify-center items-center space-y-8">
         <H1 className={`text-center`}>{data?.blog_title}</H1>
         <User2

@@ -1,7 +1,19 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const RecipePage = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  async function fetchData() {
+    const res = await fetch('https://dummyjson.com/recipes');
+    const data = await res?.json();
+    setRecipes(data?.recipes);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
   return (
     <div>
       <Helmet>
@@ -9,9 +21,9 @@ const RecipePage = () => {
         <meta name="description" content="Welcome to the recipepage" />
       </Helmet>
       <p>
-      RecipePage
+        RecipePage ,total recipe found {recipes?.length}
       </p>
-      </div>
+    </div>
   )
 }
 
